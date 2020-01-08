@@ -2,13 +2,16 @@ import Constants from 'expo-constants';
 
 const ENV = {
   dev: {
-    apiUrl: '[your.dev.api.here]'
+    apiUrl: '[your.dev.api.here]',
+    firebaseApiKey: '[your.dev.api.here]'
   },
   staging: {
-    apiUrl: '[your.staging.api.here]'
+    apiUrl: '[your.staging.api.here]',
+    firebaseApiKey: '[your.staging.api.here]'
   },
   prod: {
-    apiUrl: '[your.production.api.here]'
+    apiUrl: '[your.production.api.here]',
+    firebaseApiKey: '[your.production.api.here]'
   }
 };
 
