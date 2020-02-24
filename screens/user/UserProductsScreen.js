@@ -12,11 +12,8 @@ const UserProductsScreen = props => {
   const dispatch = useDispatch();
 
   const editProductHandler = id => {
-    props.navigation.navigate({
-      routeName: 'EditProduct',
-      params: {
-        productId: id
-      }
+    props.navigation.navigate('EditProduct', {
+      productId: id
     });
   };
 
@@ -82,10 +79,10 @@ const UserProductsScreen = props => {
   );
 };
 
-UserProductsScreen.navigationOptions = navData => {
+export const screenOptions = navData => {
   return {
     headerTitle: 'Your Products',
-    headerLeft: (
+    headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title="Menu"
@@ -96,7 +93,7 @@ UserProductsScreen.navigationOptions = navData => {
         />
       </HeaderButtons>
     ),
-    headerRight: (
+    headerRight: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title="Add"
